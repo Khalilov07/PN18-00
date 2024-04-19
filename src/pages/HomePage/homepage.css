@@ -1,0 +1,29 @@
+.course__wrapper {
+    gap: 20px;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 20px 50px;
+    justify-content: space-between;
+}
+
+.course {
+    width: 25%;
+    padding: 15px;
+    border-radius: 8px;
+    transition: 200ms;
+    box-shadow: 1px 1px 10px 1px #adadad;
+}
+
+.course__title {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.course__descr {
+    font-size: 14px;
+}
+
+.course:hover {
+    transform: translateX(10px);
+}

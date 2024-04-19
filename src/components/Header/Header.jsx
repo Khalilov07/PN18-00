@@ -8,13 +8,16 @@ const Header = () => {
 
     return (
         <header className="header">
-            <nav>
-                <ul>
+            <nav className="nav">
+                <ul className="nav__list">
                     <li>
-                        <Link to='/' >Home</Link>
+                        <Link className="nav__link" to="/">Home</Link>
                     </li>
                     <li>
-                        <Link to='about' >About</Link>
+                        <Link className="nav__link" to='/about'>About</Link>
+                    </li>
+                    <li>
+                        <Link className="nav__link" to='/contact'>Contact</Link>
                     </li>
                 </ul>
             </nav>

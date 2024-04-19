@@ -1,0 +1,21 @@
+.header {
+    height: 80px;
+    background: black;
+}
+
+.nav {
+    height: 100%;
+}
+
+.nav__list {
+    height: 100%;
+    display: flex;
+    column-gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav__link {
+    color: #FFF;
+    font-size: 22px;
+}
