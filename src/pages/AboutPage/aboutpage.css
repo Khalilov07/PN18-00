@@ -1,0 +1,14 @@
+.about__buttons {
+    display: flex;
+    column-gap: 20px;
+    padding-top: 20px;
+    justify-content: center;
+}
+
+.about__buttons button {
+    border: none;
+    font-size: 22px;
+    background: none;
+    padding: 5px 10px;
+    border: 1px solid black;
+}
