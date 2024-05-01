@@ -1,0 +1,24 @@
+{
+    "courses" : [
+        {
+            "id" : 1,
+            "title" : "HTML",
+            "duration" : 1.5
+        },
+        {
+            "id" : 2,
+            "title" : "CSS",
+            "duration" : 1.5
+        },
+        {
+            "id" : 3,
+            "title" : "JAVA SCRIPT",
+            "duration" : 2
+        },
+        {
+            "id" : 4,
+            "title" : "REACT JS",
+            "duration" : 1
+        }
+    ]
+}

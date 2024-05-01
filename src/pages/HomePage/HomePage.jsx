@@ -1,32 +1,20 @@
+import { useState, useEffect } from 'react';
+
 import './homepage.css'
+
+import axios from 'axios';
 
 import CourseItem from '../../components/CourseItem/CourseItem';
 
 
 const HomePage = () => {
-
-    const courses = [
-        {
-            id: 1,
-            title: "HTML",
-            duration: 2
-        },
-        {
-            id: 2,
-            title: "CSS",
-            duration: 2
-        },
-        {
-            id: 3,
-            title: "JS",
-            duration: 2
-        },
-        {
-            id: 4,
-            title: "REACT JS",
-            duration: 2
-        }
-    ]
+    
+    const [courses, setCourses] = useState([])
+    
+    useEffect(() => {
+        axios.get("http://localhost:3000/courses")
+            .then( ({ data }) => setCourses(data))
+    }, [])
 
     return (
         <div className='course__wrapper'>

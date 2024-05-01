@@ -8,9 +8,12 @@ const AboutPage = () => {
 
     const [likes, setLikes] = useState(0)
 
-    const [left, setLeft] = useState(0)
+    const [allSides, setAllSides] = useState({
+        left: 0,
+        right: 0
+    })
 
-    const [right, setRight] = useState(0)
+    // 
 
     const [sides, setSides] = useState([])
 
@@ -30,15 +33,19 @@ const AboutPage = () => {
 
 
     const handleLeft = () => {
-        setLeft(left + 1)
-
-        // вам нужно использовать один из этих методов: push, pop, shift, unshift
-        // и решить след задачу: при выполнение функции handleLeft, добавлять в конец массив sides
-        // заглавную букву L
+        sides.push("L")
+        setAllSides({
+            left: allSides.left + 1,
+            right: allSides.right
+        })
     }
 
     const handleRight = () => {
-        setRight(right + 1)
+        sides.push("R")
+        setAllSides({
+            left: allSides.left,
+            right: allSides.right + 1
+        })
     }
 
     return (
@@ -55,8 +62,8 @@ const AboutPage = () => {
             </h2>
 
             <div className="about__sides" style={{ display: "flex", justifyContent: "center", columnGap: "50px", marginTop: 20 }}>
-                <h2>{left}</h2>
-                <h2>{right}</h2>
+                <h2>{allSides.left}</h2>
+                <h2>{allSides.right}</h2>
             </div>
 
             <div className="about__buttons">
@@ -64,7 +71,7 @@ const AboutPage = () => {
                 <button onClick={handleRight}>RIGHT</button>
             </div>
 
-            <h2></h2>
+            <h2>{sides.join(" , ")}</h2>
 
             {/* 
             вам нужно будет создать два состояния: left & right

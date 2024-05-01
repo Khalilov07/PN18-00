@@ -1,10 +1,11 @@
 import './App.css'; // подключение css файла
+
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-
 import HomePage from './pages/HomePage/HomePage';
 import AboutPage from './pages/AboutPage/AboutPage';
 import ContactPage from './pages/ContactPage/ContactPage';
+import AddCourse from './pages/AddCourse/AddCourse';
 
 import { Routes, Route } from 'react-router-dom' // берём их из библиотеки
 
@@ -46,6 +47,7 @@ const App = () => {
         <Route path='/' element={<HomePage />} />
         <Route path='/about' element={<AboutPage />} />
         <Route path='/contact' element={<ContactPage />} />
+        <Route path='/addcourse' element={<AddCourse />} />
       </Routes>
 
       <Footer />
