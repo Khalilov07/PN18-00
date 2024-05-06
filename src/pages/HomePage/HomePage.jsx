@@ -8,6 +8,8 @@ import CourseItem from '../../components/CourseItem/CourseItem';
 
 
 const HomePage = () => {
+
+    // json-server --watch db.json
     
     const [courses, setCourses] = useState([])
     
