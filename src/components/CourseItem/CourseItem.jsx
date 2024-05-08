@@ -7,7 +7,7 @@ const CourseItem = (props) => {
     return (
         <div className="course">
             <h2 className='course__title'>Title: {props.title}</h2>
-            <p className='course__descr'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur maxime omnis alias saepe similique officiis ipsam delectus totam at mollitia repudiandae soluta odio ea pariatur, inventore excepturi nobis deserunt nemo?</p>
+            <p className='course__duration'>Duration: {props.duration} month</p>
         </div>
     );
 };
