@@ -9,8 +9,10 @@ import styles from './addcourse.module.css'
 
 const AddCourse = () => {
 
-    const [title, setTitle] = useState('')
+    const [title, setTitle] = useState("")
     const [duration, setDuration] = useState(0)
+    const [descr, setDescr] = useState("")
+    const [image, setImage] = useState("") 
     const [open, setOpen] = useState(false);
 
     const handleClose = (event, reason) => {
@@ -27,7 +29,9 @@ const AddCourse = () => {
 
         const newData = {
             title,
-            duration
+            duration,
+            descr,
+            image
         }
 
         axios.post("http://localhost:3000/courses", newData)
@@ -36,6 +40,9 @@ const AddCourse = () => {
                 setDuration(0)
                 setOpen(true)
             })
+            .catch(err => console.log(err))
+
+            // catch - для ошибок
     }
 
     return (
@@ -59,6 +66,22 @@ const AddCourse = () => {
                     variant="outlined"
                     value={duration}
                     onChange={(e) => setDuration(e.target.value)}
+                />
+
+                <TextField
+                    id="outlined-basic"
+                    label="Description..."
+                    variant="outlined"
+                    value={descr}
+                    onChange={(e) => setDescr(e.target.value)}
+                />
+
+                <TextField
+                    id="outlined-basic"
+                    label="Image..."
+                    variant="outlined"
+                    value={image}
+                    onChange={(e) => setImage(e.target.value)}
                 />
 
                 <Button onClick={addCourse} type='submit' variant="contained" color="success">
