@@ -38,6 +38,8 @@ const AddCourse = () => {
             .then(res => {
                 setTitle("")
                 setDuration(0)
+                setDescr("")
+                setImage("")
                 setOpen(true)
             })
             .catch(err => console.log(err))
@@ -102,5 +104,4 @@ const AddCourse = () => {
 
 export default AddCourse;
 
-// вам нужно добавить ещё один TextFiled, где вы будете добавлять инфо о курсе
-// вам нужно добавить ещё один TextFiled, где вы будете добавлять картинку для курса
+// после добавления курса перекидывайте пользователя на страницу home

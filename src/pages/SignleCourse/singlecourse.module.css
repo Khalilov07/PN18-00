@@ -1,0 +1,28 @@
+.course {
+    gap: 10px;
+    width: 60%;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.course img {
+    width: 100%;
+}
+
+.editMode {
+    display: flex;
+    height: 60vh;
+    gap: 15px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}

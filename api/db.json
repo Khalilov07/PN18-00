@@ -1,3 +1,11 @@
 {
-  "courses": []
+  "courses": [
+    {
+      "id": "3289",
+      "title": "HTML",
+      "duration": "2",
+      "descr": "dawdawdaddawdaw",
+      "image": "https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-html/sta-je-html.jpg"
+    }
+  ]
 }
