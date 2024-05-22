@@ -26,7 +26,13 @@ const SingleCourse = () => {
 
     useEffect(() => {
         axios.get(`http://localhost:3000/courses/${id}`)
-            .then(res => setCourse(res.data))
+            .then(res => {
+                setCourse(res.data)
+                setTitle(res.data.title)
+                setDuration(res.data.duration)
+                setDescr(res.data.descr)
+                setImage(res.data.image)
+            })
     }, [])
 
     const deleteCourse = (id) => {
@@ -43,8 +49,19 @@ const SingleCourse = () => {
 
     const editCourse = (id) => {
         setEditMode(false)
-        axios.put(`http://localhost:3000/courses/${id}`)
+
+        const newData = {
+            title: title,
+            duration: duration,
+            descr: descr,
+            image: image
+        }
+
+        axios.put(`http://localhost:3000/courses/${id}`,newData)
+            .then(res => setCourse(res.data))
     }
+
+
 
     return (
         <Box
@@ -79,7 +96,7 @@ const SingleCourse = () => {
                             variant="outlined"
                             value={title}
                             // onChange - это слушатель события, он срабатывает в момент изменения
-                            onChange={(e) => setTitle(e.target.value)}
+                            onChange={(e) => setTitle(e.target.value)} // e.target.value - Это то что ввожу
                         />
 
                         <TextField
