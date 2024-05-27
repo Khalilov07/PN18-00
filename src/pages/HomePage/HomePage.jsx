@@ -15,14 +15,14 @@ const HomePage = () => {
     const [courses, setCourses] = useState([])
 
     useEffect(() => {
-        axios.get("http://localhost:3000/courses")
+        axios.get("http://localhost:3001/courses")
             .then(({ data }) => setCourses(data))
     }, [])
 
     return (
         <>
             <Box to="/single" className='course__wrapper' style={{ color: "black" }}>
-                {courses.map(course => <CourseItem title={course.title} duration={course.duration} id={course.id} />)}
+                {courses.map(course => <CourseItem key={course.id} title={course.title} duration={course.duration} id={course.id} />)}
             </Box>
         </>
     );

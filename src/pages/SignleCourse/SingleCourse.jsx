@@ -25,7 +25,7 @@ const SingleCourse = () => {
     };
 
     useEffect(() => {
-        axios.get(`http://localhost:3000/courses/${id}`)
+        axios.get(`http://localhost:3001/courses/${id}`)
             .then(res => {
                 setCourse(res.data)
                 setTitle(res.data.title)

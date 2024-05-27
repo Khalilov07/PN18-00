@@ -1,12 +1,9 @@
 {
   "courses": [
     {
-      "id": "9446"
-    },
-    {
-      "title": "REACT",
+      "title": "JAVA ",
       "duration": "1",
-      "descr": "REACT ITS LIBARARY",
+      "descr": "REACT ITS LIbrarARY",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTw3HApB4bsvabXW3L14cV-LhFo0L71QmEESJN3vW9Ow&s",
       "id": "a835"
     },
@@ -23,13 +20,20 @@
       "duration": 0,
       "descr": "",
       "image": ""
+    }
+  ],
+  "users": [
+    {
+      "email": "akram01@gmail.com",
+      "password": "$2a$10$UbwH68CrIzojJsbGjxZAVecgx638dcq0DjIdTEVten6iL8a.izUm2",
+      "name": "Akram",
+      "id": 1
     },
     {
-      "id": "69bb",
-      "title": "",
-      "duration": 0,
-      "descr": "",
-      "image": ""
+      "email": "erbol01@mail.ru",
+      "password": "$2a$10$crbiYHI3AAU8JlK/X58pYuHRzjaIc/hGYjYxa8PUxwsxfbjwyoZZi",
+      "name": "Erbol",
+      "id": 2
     }
   ]
 }

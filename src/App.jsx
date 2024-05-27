@@ -9,6 +9,7 @@ import AddCourse from './pages/AddCourse/AddCourse';
 
 import { Routes, Route } from 'react-router-dom' // берём их из библиотеки
 import SingleCourse from './pages/SignleCourse/SingleCourse';
+import RegisterPage from './pages/RegisterPage/RegisterPage';
 
 // функция - компонент
 
@@ -50,6 +51,7 @@ const App = () => {
         <Route path='/contact' element={<ContactPage />} />
         <Route path='/addcourse' element={<AddCourse />} />
         <Route path='/singlecourse/:id' element={<SingleCourse />} />
+        <Route path='/signup' element={<RegisterPage />} />
       </Routes>
 
       <Footer />
