@@ -34,6 +34,30 @@
       "password": "$2a$10$crbiYHI3AAU8JlK/X58pYuHRzjaIc/hGYjYxa8PUxwsxfbjwyoZZi",
       "name": "Erbol",
       "id": 2
+    },
+    {
+      "email": "akram01231@gmail.com",
+      "password": "$2a$10$exBJDRvn4qFZkuKkVPJVUO4hMsNMhL6PfU5HB4xJJ7ayyEck.Qt7m",
+      "name": "Akram",
+      "id": 3
+    },
+    {
+      "email": "akram00101@gmail.com",
+      "password": "$2a$10$CtJ98HHposFroB9q6ggGzu0vZnGppnajhrllw5RT4U19ocJidMSQS",
+      "name": "akram01",
+      "id": 4
+    },
+    {
+      "email": "asd@gmail.com",
+      "password": "$2a$10$/9BIsrXyR79dmS5sy6eiIO7KxS/3Nesp2d/ms7hQBEg2AyhX6/7uO",
+      "name": "asd123",
+      "id": 5
+    },
+    {
+      "email": "akram1001@gmail.com",
+      "password": "$2a$10$oUEeryFlX2nkcd2Z5PWtyuiIyM3buHRL5RawNtN6RcLg5mYD1xcs2",
+      "name": "Akram",
+      "id": 6
     }
   ]
 }

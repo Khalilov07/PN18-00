@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 
 import { Button, TextField, IconButton, Snackbar } from '@mui/material';
+
 import axios from 'axios';
 
-const RegisterPage = () => {
+const LoginPage = () => {
 
-    const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [response, setResponse] = useState('')
     const [open, setOpen] = useState(false);
+    const [user, setUser] = useState({})
 
     const handleClose = (event, reason) => {
         if (reason === 'clickaway') {
@@ -36,19 +37,17 @@ const RegisterPage = () => {
         e.preventDefault()
 
         const user = {
-            name,
             email,
             password
         }
 
-        axios.post("http://localhost:3001/users", user)
+        axios.post("http://localhost:3001/login", user)
             .then(res => {
-                setName('')
                 setEmail('')
                 setPassword('')
                 setOpen(true)
-                console.log(res);
-                setResponse("you're registred")
+                setUser(res.data.user)
+                setResponse("you're login")
             })
             .catch(err => {
                 setOpen(true)
@@ -64,6 +63,8 @@ const RegisterPage = () => {
             alignItems: "center",
             justifyContent: "center"
         }}>
+            {user.name}
+            
             <form onSubmit={(e) => regUser(e)} // submit - Отправка 
                 style={{
                     display: "flex",
@@ -77,14 +78,7 @@ const RegisterPage = () => {
                     border: "1px solid gray"
                 }}
             >
-                <h1>Register</h1>
-                <TextField
-                    id="outlined-basic"
-                    label="Name..."
-                    variant="outlined"
-                    value={name} // ilim
-                    onChange={(e) => setName(e.target.value)}
-                />
+                <h1>Login</h1>
                 <TextField
                     id="outlined-basic"
                     label="Email..."
@@ -101,7 +95,7 @@ const RegisterPage = () => {
                     onChange={(e) => setPassword(e.target.value)}
                 />
                 <Button onClick={null} type='submit' variant="contained" color="success">
-                    REGISTER
+                    LOGIN
                 </Button>
             </form>
             <Snackbar
@@ -115,7 +109,11 @@ const RegisterPage = () => {
     );
 };
 
-export default RegisterPage;
-
-// добавьте инпут при регистрации который будет позволять ввести возраст
-// стилизуйте формы взяв её из гугл фотографий
+export default LoginPage;
+{/* 
+    1. перенести код с RegisterPage в LoginPage
+    2. убрать состояние и TextField который отвечает за name
+    3. делать запрос с email И password на ссылку http://localhost:3001/login
+    4. получать уведомление (snackBar) о том что вы вошли в аккаунт
+    5. создать состояние user, внутри then получать данные о пользователе (res), полученные данные сохранять user 
+*/}
