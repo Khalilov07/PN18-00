@@ -11,6 +11,7 @@ import { Routes, Route } from 'react-router-dom' // берём их из биб�
 import SingleCourse from './pages/SignleCourse/SingleCourse';
 import RegisterPage from './pages/RegisterPage/RegisterPage';
 import LoginPage from './pages/LoginPage/LoginPage';
+import { useState } from 'react';
 
 // функция - компонент
 
@@ -30,6 +31,8 @@ const App = () => {
   // Routes - это родитель маршрутов
 
   // http://localhost:3000/
+
+  const [user, setUser] = useState(null)
 
   return (
     <>

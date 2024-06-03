@@ -4,13 +4,17 @@ import { Button, TextField, IconButton, Snackbar } from '@mui/material';
 
 import axios from 'axios';
 
-const LoginPage = () => {
+import { addUser } from '../../store/userSlice';
+import { useDispatch } from 'react-redux';
+
+const LoginPage = ({ handleState }) => {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [response, setResponse] = useState('')
     const [open, setOpen] = useState(false);
     const [user, setUser] = useState({})
+    const dispatch = useDispatch()
 
     const handleClose = (event, reason) => {
         if (reason === 'clickaway') {
@@ -47,6 +51,7 @@ const LoginPage = () => {
                 setPassword('')
                 setOpen(true)
                 setUser(res.data.user)
+                dispatch(addUser(res.data.user))
                 setResponse("you're login")
             })
             .catch(err => {
